@@ -11,76 +11,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
-    <!-- Font Icon -->
-    <link rel="stylesheet" href="{{ asset ('fonts/material-icon/css/material-design-iconic-font.min.css') }}">
-
-    <!-- Main css -->
-    <link rel="stylesheet" href="{{asset ('css/style.css') }}">
 </head>
 
 <body class="bg-primary">
-    @yield('content')
-    <!-- Sing in  Form -->
-    <section class="sign-in">
-
-        <div class="container">
-            <div class="signin-content">
-                {{-- Error Alert --}}
-                @if(session('error'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{session('error')}}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                @endif
-
-                <div class="signin-image">
-                    <figure><img src="{{('images/signin-image.jpg') }} alt=" sing up image"></figure>
-                    <a href="{{url('register')}}" class="signup-image-link">Create an account</a>
-                </div>
-
-                <div class="signin-form">
-                    @error('login_gagal')
-                    {{-- <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                    </span> --}}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        {{-- <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span> --}}
-                        <span class="alert-inner--text"><strong>Warning!</strong> {{ $message }}</span>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    @enderror
-
-                    <h2 class="form-title">Sign In</h2>
-                    <form method="POST" class="register-form" id="login-form">
-                        <div class="form-group">
-                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                            <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                        </div>
-                        <div class="form-group">
-                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                            <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                        </div>
-                        <div class="form-group">
-                            <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                            <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                        </div>
-                        <div class="form-group form-button">
-                            <input action="{{url('admin_dashboard')}} " type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
-
-        <script src="{{ asset ('vendor/jquery/jquery.min.js') }}"></script>
-        <script src="{{asset ('js/main.js')}}"></script>
-
-        <!-- <div id="layoutAuthentication">
+    <div id="layoutAuthentication">
         <div id="layoutAuthentication_content">
             <main>
                 <div class="container">
@@ -152,10 +86,10 @@
             </main>
         </div> -->
 
-        </div>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="{{url('assets/js/scripts.js')}}"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="{{url('assets/js/scripts.js')}}"></script>
 </body>
 
 </html>
